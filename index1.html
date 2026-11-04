@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html ng-app="collegeApp">
+
+<head>
+    <title>Student Management</title>
+
+    <!-- AngularJS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        .pass {
+            color: green;
+            font-weight: bold;
+        }
+
+        .fail {
+            color: red;
+            font-weight: bold;
+        }
+
+        input {
+            margin: 5px;
+            padding: 7px;
+        }
+
+        button {
+            padding: 7px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Parent Controller -->
+    <div ng-controller="CollegeController">
+
+        <h1>{{ collegeName }}</h1>
+        <h2>Student Management System</h2>
+
+        <!-- Child Controller -->
+        <div ng-controller="StudentController">
+
+            <h3>Enter Student Details</h3>
+
+            Name:
+            <input type="text" ng-model="name"
+                   placeholder="Enter name">
+
+            <br>
+
+            Department:
+            <input type="text" ng-model="department"
+                   placeholder="Enter department">
+
+            <br>
+
+            Semester:
+            <input type="number" ng-model="semester"
+                   placeholder="Enter semester">
+
+            <br>
+
+            <button ng-click="addStudent()">
+                Add Student
+            </button>
+
+            <hr>
+
+            <h3>Student List</h3>
+
+            <ul>
+                <li ng-repeat="student in students">
+                    {{ student }}
+                </li>
+            </ul>
+
+            <hr>
+
+            <h3>Student Details</h3>
+
+            <button ng-click="showDetails = !showDetails">
+                Show / Hide Details
+            </button>
+
+            <div ng-show="showDetails">
+
+                <p>Name: {{ name }}</p>
+                <p>Department: {{ department }}</p>
+                <p>Semester: {{ semester }}</p>
+
+            </div>
+
+            <hr>
+
+            <h3>Examination Result</h3>
+
+            Enter Marks:
+            <input type="number" ng-model="marks"
+                   placeholder="Enter marks">
+
+            <br>
+
+            <div ng-if="marks !== undefined && marks !== null && marks !== ''">
+
+                <p ng-if="marks >= 40"
+                   ng-class="'pass'">
+                    Pass
+                </p>
+
+                <p ng-if="marks < 40"
+                   ng-class="'fail'">
+                    Needs Improvement
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

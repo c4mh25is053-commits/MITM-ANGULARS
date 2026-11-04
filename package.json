@@ -13,7 +13,6 @@
   "dependencies": {
     "angular": "^1.8.3"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/c4mh25is053-commits/MITM-ANGULARS.git"
