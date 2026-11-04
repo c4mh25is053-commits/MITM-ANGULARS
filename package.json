@@ -1,0 +1,25 @@
+{
+  "name": "chiru",
+  "version": "1.0.0",
+  "description": "\"# chiranthan-bhai\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "angular": "^1.8.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c4mh25is053-commits/MITM-ANGULARS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/c4mh25is053-commits/MITM-ANGULARS/issues"
+  },
+  "homepage": "https://github.com/c4mh25is053-commits/MITM-ANGULARS#readme"
+}
